@@ -18,7 +18,6 @@ Add dep
     <groupId>io.smallrye.reactive</groupId>
     <artifactId>smallrye-mutiny-vertx-web-client</artifactId>
     <version>2.15.1</version>
-    <scope>test</scope>
 </dependency>
 ```
 Slide.3
