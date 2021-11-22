@@ -8,10 +8,20 @@
 
 ## Code snippets
 
+Generate app
 ```bash
-quarkus create app --maven --java --no-wrapper -x quarkus-resteasy-reactive,quarkus-resteasy-reactive-jackson,quarkus-vertx,smallrye-mutiny-vertx-web-client org.acme:quarkus-concurrency:1.0.0-SNAPSHOT
+quarkus create app --maven --java --no-wrapper -x quarkus-resteasy-reactive,quarkus-resteasy-reactive-jackson,quarkus-vertx,org.acme:quarkus-concurrency:1.0.0-SNAPSHOT
 ```
-
+Add dep
+```bash
+<dependency>
+    <groupId>io.smallrye.reactive</groupId>
+    <artifactId>smallrye-mutiny-vertx-web-client</artifactId>
+    <version>2.15.1</version>
+    <scope>test</scope>
+</dependency>
+```
+Slide.3
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -38,7 +48,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.16
 ```java
 @Path("/handleit")
 public class ReactiveGreetingResource {
@@ -73,7 +83,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.19
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -116,7 +126,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.24
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -131,7 +141,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.25
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -145,7 +155,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.26
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -162,7 +172,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.27
 ```java
 @Path("/hello")
 public class ReactiveGreetingResource {
@@ -187,7 +197,7 @@ public class ReactiveGreetingResource {
 
 }
 ```
-
+Slide.28
 ```java
 package org.acme;
 
