@@ -10,7 +10,10 @@
 
 Generate app
 ```bash
-quarkus create app --maven --java --no-wrapper -x quarkus-resteasy-reactive,quarkus-resteasy-reactive-jackson,quarkus-vertx org.acme:quarkus-concurrency:1.0.0-SNAPSHOT
+quarkus create app \
+  --maven --java --no-wrapper \
+  -x quarkus-resteasy-reactive,quarkus-resteasy-reactive-jackson,quarkus-vertx \
+  org.acme:quarkus-concurrency:1.0.0-SNAPSHOT
 ```
 Add dep
 ```bash
