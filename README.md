@@ -28,7 +28,7 @@ public class ReactiveGreetingResource {
     @GET
     @Path("imperative")
     @Produces(MediaType.TEXT_PLAIN)
-    public String imperativeHello(@PathParam("name") String name) {
+    public String imperativeHello(@QueryParam("name") String name) {
         System.out.println(Thread.currentThread().getName());
         return greeting(name);
     }
@@ -36,7 +36,7 @@ public class ReactiveGreetingResource {
     @GET
     @Path("reactive")
     @Produces(MediaType.TEXT_PLAIN)
-    public CompletionStage<String> reactiveHello(@PathParam("name") String name) {
+    public CompletionStage<String> reactiveHello(@QueryParam("name") String name) {
         System.out.println(Thread.currentThread().getName());
         return CompletableFuture.supplyAsync(() -> greeting(name)).minimalCompletionStage();
     }
