@@ -11,7 +11,8 @@
 Generate app
 ```bash
 quarkus create app \
-  --maven --java --no-wrapper \
+  --stream=3.0 \
+  --maven --no-wrapper \
   -x quarkus-resteasy-reactive,quarkus-resteasy-reactive-jackson,quarkus-vertx \
   org.acme:quarkus-concurrency:1.0.0-SNAPSHOT
 ```
@@ -20,7 +21,7 @@ Add dep
 <dependency>
     <groupId>io.smallrye.reactive</groupId>
     <artifactId>smallrye-mutiny-vertx-web-client</artifactId>
-    <version>2.15.1</version>
+    <version>2.21.0</version>
 </dependency>
 ```
 Slide.3
@@ -209,9 +210,9 @@ import io.vertx.mutiny.core.Vertx;
 import io.vertx.mutiny.ext.web.client.HttpResponse;
 import io.vertx.mutiny.ext.web.client.WebClient;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 @Path("/joke")
 public class ReactiveGreetingResource {
